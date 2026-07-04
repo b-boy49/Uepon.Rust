@@ -728,6 +728,15 @@ body::before{
     width:100%;
   }
 
+  .time-marks{
+    height:34px;
+    font-size:.64rem;
+  }
+
+  .time-marks .mark-mid{
+    top:18px;
+  }
+
   .site-nav{
     padding:0;
   }
