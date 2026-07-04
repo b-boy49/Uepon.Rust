@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>修復ルール | UEPON'S RUST</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="ページナビゲーション">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="index.html">トップ</a>
+      <a href="overview.html">概要</a>
+      <a href="schedule.html">日程</a>
+      <a href="points.html">ポイント</a>
+      <a href="items.html">倍率</a>
+      <a href="repair.html" aria-current="page">修復ルール</a>
+      <a href="rules.html">禁止事項</a>
+      <a href="build.html">建築</a>
+      <a href="teams.html">チーム</a>
+      <a href="staff.html">スタッフ</a>
+      <a href="detail.html">詳細</a>
+    </div>
+  </nav>
+  <main class="content-wrap">
+    <header class="page-head">
+      <p class="page-tag">// BRIEFING_04</p>
+      <h1 class="page-title wave-text">修復状態について</h1>
+    </header>
+    <section class="card">
+      <span class="rule-strong">修復状態とは</span>
+      <p class="body-text"><strong>本拠点へレイドされてTCを失ったチーム</strong>は「<strong>修復状態</strong>」となる。修復状態とは、レイドされたチームが再起するための保護期間です。レイド成功したチームのディスコ報告から「修復状態」開始。</p>
+      <p class="body-text"><strong>修復状態はレイド完了報告から4時間後に自動解除。</strong>自動解除前に準備ができたら「修復状態」チームがディスコへ宣言する。<br>※4時間のカウントは鯖開放時間と同期とします。2時間後に鯖が終了時点で修復状態になった場合、翌日の鯖開放から残り2時間がカウントされます。</p>
+      <div class="flow">
+        <div class="node blue">TC喪失</div>
+        <div class="arrow">4時間以内</div>
+        <div class="node green">拠点再建完了</div>
+      </div>
+      <div class="callout" style="background:var(--blood);color:#fff;border-color:#7a1616;text-align:center;">準備出来次第、ディスコに宣言することで復帰可能</div>
+    </section>
+    <section class="card">
+      <span class="rule-strong">修復状態中のレイド制限</span>
+      <p class="body-text">「修復状態」のチームへの<strong style="color:var(--blood);">本拠点のレイドは禁止</strong>。同様に<strong style="color:var(--blood);">「修復状態」のチームから他チームへのレイドは禁止。</strong><br>※PvPは可能。修復ファーム中の戦闘回避が不可能なため。</p>
+      <p class="body-text">レイド中に自拠点がレイド（TC破壊）された場合、その時点で<strong>自チームのレイドは即中止</strong>。</p>
+      <div class="flow">
+        <div class="node green">Aチーム<br><small style="font-size:.7rem;">（レイドベース）</small></div>
+        <div class="arrow">①レイド中 →</div>
+        <div class="node blue">Bチーム</div>
+      </div>
+      <div class="flow" style="margin-top:-8px;">
+        <div class="node yellow">Cチーム</div>
+        <div class="arrow">②レイド成功 →</div>
+        <div class="node green">Aチーム<br><small style="font-size:.7rem;">（レイドベース）</small></div>
+      </div>
+      <div class="callout" style="background:var(--blood);color:#fff;border-color:#7a1616;text-align:center;">③Aチーム→Bチームへのレイドはその時点で中止</div>
+      <p class="body-text" style="text-align:center;margin-top:16px;"><strong>レイド拠点がレイドされても「修復状態」にはならない。</strong></p>
+    </section>
+    <footer class="page-footer">
+      <a class="back-link" href="index.html">TOP PAGE</a>
+      <span class="footer-note">UEPON'S RUST // REPAIR</span>
+    </footer>
+  </main>
+  <script src="site.js"></script>
+</body>
+</html>

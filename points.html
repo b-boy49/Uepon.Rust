@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポイント | UEPON'S RUST</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="ページナビゲーション">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="index.html">トップ</a>
+      <a href="overview.html">概要</a>
+      <a href="schedule.html">日程</a>
+      <a href="points.html" aria-current="page">ポイント</a>
+      <a href="items.html">倍率</a>
+      <a href="repair.html">修復ルール</a>
+      <a href="rules.html">禁止事項</a>
+      <a href="build.html">建築</a>
+      <a href="teams.html">チーム</a>
+      <a href="staff.html">スタッフ</a>
+      <a href="detail.html">詳細</a>
+    </div>
+  </nav>
+  <main class="content-wrap">
+    <header class="page-head">
+      <p class="page-tag">// BRIEFING_02</p>
+      <h1 class="page-title wave-text">ポイント獲得方法</h1>
+    </header>
+    <section class="card">
+      <div class="text-with-image">
+        <div>
+          <span class="rule-strong">優勝条件</span>
+          <p class="body-text">レイド成功時に獲得できるポイントを最終的に一番多く獲得したチームの優勝。</p>
+          <span class="rule-strong">レイド成功条件</span>
+          <p class="body-text">敵チーム拠点のTCを破壊し、<strong>「新しいTCを置いたチーム」</strong>がポイント獲得。</p>
+        </div>
+        <img class="text-with-image-img" src="images/e6ce2520-8669-4346-8a6b-44752f6f84a9.png" alt="">
+      </div>
+      <div class="point-table">
+        <div class="head">本拠点レイド</div>
+        <div class="head">レイド拠点レイド</div>
+        <div>本拠点<span class="num">5 pt</span></div>
+        <div>レイド拠点<span class="num">1 pt</span></div>
+        <div class="full">レイダー状態の本拠点レイド<span class="num">5 pt + そのチーム獲得ポイントの半分のポイント</span></div>
+      </div>
+      <div class="callout-blue">
+        <h3>レイダーとは</h3>
+        敵本拠点のレイドを成功したチームは「レイダー」となりサーバー全体に通知されます。本拠点がレイドされるとレイダー状態解除となる。
+      </div>
+      <div class="callout" style="background:var(--blood);color:#fff;border-color:#7a1616;text-align:center;font-size:1.15rem;">
+        TCを設置したチームは<span class="wavy-underline">ディスコード</span>にレイド完了報告をする。
+      </div>
+      <p class="body-text" style="margin-top:8px;font-size:.9rem;">例：Aチーム→Cチームへレイド（本拠点） Dチーム→Fチーム（レイド拠点）など</p>
+    </section>
+    <footer class="page-footer">
+      <a class="back-link" href="index.html">TOP PAGE</a>
+      <span class="footer-note">UEPON'S RUST // POINTS</span>
+    </footer>
+  </main>
+  <script src="site.js"></script>
+</body>
+</html>
