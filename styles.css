@@ -278,27 +278,15 @@ body::before{
 
 .site-walker{
   position:fixed;
-  bottom:10px;
-  left:-90px;
-  width:64px;
-  height:64px;
-  object-fit:cover;
-  border-radius:10px;
-  border:2px solid var(--rust-2);
-  box-shadow:0 8px 20px rgba(0,0,0,.55);
+  left:0;
+  top:0;
+  width:60px;
+  height:65px;
+  object-fit:contain;
   z-index:400;
   pointer-events:none;
-  animation:walk-across 16s linear infinite, walk-bounce .45s ease-in-out infinite;
-}
-
-@keyframes walk-across{
-  from{ left:-90px; }
-  to{ left:calc(100% + 90px); }
-}
-
-@keyframes walk-bounce{
-  0%,100%{ transform:translateY(0); }
-  50%{ transform:translateY(-8px); }
+  user-select:none;
+  will-change:transform;
 }
 
 .event-name .wave-char,
