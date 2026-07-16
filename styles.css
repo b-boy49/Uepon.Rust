@@ -736,6 +736,19 @@ body::before{
     top:18px;
   }
 
+  .bar{
+    height:auto;
+    min-height:46px;
+  }
+
+  .bar span{
+    white-space:normal;
+    min-width:0;
+    font-size:.66rem;
+    line-height:1.25;
+    padding:6px 4px;
+  }
+
   .site-nav{
     padding:0;
   }
