@@ -305,6 +305,16 @@ body::before{
   50%{ text-shadow:0 10px 26px rgba(0,0,0,.55), 0 0 16px rgba(240,155,89,.95), 0 0 32px rgba(201,89,31,.7); }
 }
 
+.neon-red.wave-text .wave-char{
+  color:var(--blood);
+  animation:wave-float 2.4s ease-in-out infinite, wave-glow-red 2.4s ease-in-out infinite;
+}
+
+@keyframes wave-glow-red{
+  0%,100%{ text-shadow:0 0 6px rgba(168,34,34,.4); }
+  50%{ text-shadow:0 0 16px rgba(255,59,59,1), 0 0 32px rgba(168,34,34,.9), 0 0 48px rgba(255,59,59,.6); }
+}
+
 .overview-lead{
   font-family:'Oswald',sans-serif;
   font-size:clamp(1.6rem, 3.2vw, 2.5rem);
