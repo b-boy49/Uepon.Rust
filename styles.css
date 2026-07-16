@@ -585,6 +585,16 @@ body::before{
   margin-bottom:14px;
 }
 
+.staff-icon-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg, var(--rust-1), var(--rust-2));
+  color:#fff;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2.2rem;
+}
+
 .staff-name{
   font-family:'Oswald',sans-serif;
   font-size:1.2rem;
