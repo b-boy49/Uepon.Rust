@@ -475,6 +475,7 @@ body::before{
 
 .point-table .head{background:var(--rust-1);}
 .point-table .full{grid-column:1 / 3;background:var(--olive);}
+.point-table .full.blood{background:var(--blood);}
 
 .num{
   display:block;
