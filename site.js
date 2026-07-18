@@ -134,3 +134,35 @@ function tickPet() {
 
 pet.src = petRunningFrames[0];
 tickPet();
+
+const lightboxImages = document.querySelectorAll('main.content-wrap img');
+
+if (lightboxImages.length) {
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  const overlayImg = document.createElement('img');
+  overlay.appendChild(overlayImg);
+  document.body.appendChild(overlay);
+
+  function openLightbox(src, alt) {
+    overlayImg.src = src;
+    overlayImg.alt = alt || '';
+    overlay.classList.add('is-open');
+    document.body.classList.add('lightbox-lock');
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('lightbox-lock');
+  }
+
+  lightboxImages.forEach((img) => {
+    img.classList.add('lightbox-trigger');
+    img.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.alt));
+  });
+
+  overlay.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+}
