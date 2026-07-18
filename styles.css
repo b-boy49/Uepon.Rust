@@ -112,6 +112,20 @@ body::before{
   letter-spacing:.18em;
 }
 
+.landing-image-section{
+  width:min(1100px, calc(100% - 32px));
+  margin:0 auto;
+  padding:96px 0 64px;
+}
+
+.landing-image{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:6px;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+
 .pv-section{
   width:min(960px, calc(100% - 32px));
   margin:0 auto 64px;
