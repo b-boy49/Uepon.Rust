@@ -135,7 +135,23 @@ function tickPet() {
 pet.src = petRunningFrames[0];
 tickPet();
 
-const lightboxImages = document.querySelectorAll('main.content-wrap img');
+const pvPlayer = document.querySelector('.pv-player');
+if (pvPlayer) {
+  const pvVideo = pvPlayer.querySelector('.pv-video');
+  const pvPlayBtn = pvPlayer.querySelector('.pv-play-btn');
+
+  pvPlayBtn.addEventListener('click', () => {
+    pvVideo.setAttribute('controls', '');
+    pvVideo.play();
+    pvPlayer.classList.add('is-playing');
+  });
+
+  pvVideo.addEventListener('pause', () => pvPlayer.classList.remove('is-playing'));
+  pvVideo.addEventListener('ended', () => pvPlayer.classList.remove('is-playing'));
+  pvVideo.addEventListener('play', () => pvPlayer.classList.add('is-playing'));
+}
+
+const lightboxImages = Array.from(document.querySelectorAll('main.content-wrap img')).filter((img) => !img.closest('a'));
 
 if (lightboxImages.length) {
   const overlay = document.createElement('div');
