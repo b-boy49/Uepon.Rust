@@ -146,7 +146,7 @@ if (pvPlayer) {
     pvPlayBtn.addEventListener('click', () => {
       const iframe = document.createElement('iframe');
       iframe.className = 'pv-video';
-      iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+      iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0&cc_load_policy=0`;
       iframe.title = 'YouTube video player';
       iframe.frameBorder = '0';
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
