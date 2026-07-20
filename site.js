@@ -201,3 +201,49 @@ if (lightboxImages.length) {
     if (event.key === 'Escape') closeLightbox();
   });
 }
+
+const lyricsButtons = document.querySelectorAll('.lyrics-btn');
+
+if (lyricsButtons.length) {
+  const lyricsOverlay = document.createElement('div');
+  lyricsOverlay.className = 'lyrics-overlay';
+  const lyricsModal = document.createElement('div');
+  lyricsModal.className = 'lyrics-modal';
+  const lyricsClose = document.createElement('button');
+  lyricsClose.type = 'button';
+  lyricsClose.className = 'lyrics-close';
+  lyricsClose.setAttribute('aria-label', '閉じる');
+  lyricsClose.textContent = '×';
+  const lyricsBody = document.createElement('div');
+  lyricsBody.className = 'lyrics-body';
+  lyricsModal.appendChild(lyricsClose);
+  lyricsModal.appendChild(lyricsBody);
+  lyricsOverlay.appendChild(lyricsModal);
+  document.body.appendChild(lyricsOverlay);
+
+  function openLyrics(targetId) {
+    const template = document.getElementById(targetId);
+    if (!template) return;
+    lyricsBody.innerHTML = '';
+    lyricsBody.appendChild(template.content.cloneNode(true));
+    lyricsOverlay.classList.add('is-open');
+    document.body.classList.add('lyrics-lock');
+  }
+
+  function closeLyrics() {
+    lyricsOverlay.classList.remove('is-open');
+    document.body.classList.remove('lyrics-lock');
+  }
+
+  lyricsButtons.forEach((btn) => {
+    btn.addEventListener('click', () => openLyrics(btn.dataset.lyricsTarget));
+  });
+
+  lyricsClose.addEventListener('click', closeLyrics);
+  lyricsOverlay.addEventListener('click', (event) => {
+    if (event.target === lyricsOverlay) closeLyrics();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeLyrics();
+  });
+}

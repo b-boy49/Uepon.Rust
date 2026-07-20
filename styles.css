@@ -1043,6 +1043,19 @@ body.lightbox-lock{
   flex:0 0 auto;
 }
 
+.material-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:0 0 auto;
+}
+
+.lyrics-btn{
+  border:none;
+  cursor:pointer;
+  font:inherit;
+}
+
 @media (max-width:640px){
   .material-item{
     flex-wrap:wrap;
@@ -1056,6 +1069,87 @@ body.lightbox-lock{
     width:100%;
     text-align:center;
   }
+
+  .material-actions{
+    width:100%;
+  }
+
+  .material-actions .staff-link{
+    flex:1 1 auto;
+  }
+}
+
+.lyrics-overlay{
+  position:fixed;
+  inset:0;
+  z-index:900;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(10,8,6,.92);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .25s ease;
+}
+
+.lyrics-overlay.is-open{
+  opacity:1;
+  visibility:visible;
+}
+
+.lyrics-modal{
+  position:relative;
+  width:100%;
+  max-width:560px;
+  max-height:85vh;
+  overflow-y:auto;
+  background:#14100c;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;
+  padding:32px 24px 24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+.lyrics-close{
+  position:absolute;
+  top:10px;
+  right:14px;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+  color:#fff7eb;
+  font-size:1.3rem;
+  line-height:1;
+  cursor:pointer;
+  transition:background .2s ease;
+}
+
+.lyrics-close:hover{
+  background:var(--rust-1);
+}
+
+.lyrics-title{
+  color:var(--rust-3);
+  font-family:'Oswald',sans-serif;
+  font-weight:700;
+  letter-spacing:.03em;
+  margin-bottom:16px;
+  text-align:center;
+}
+
+.lyrics-text{
+  white-space:pre-wrap;
+  color:#ddd4c4;
+  font-size:.92rem;
+  line-height:1.9;
+  font-family:inherit;
+  margin:0;
+}
+
+body.lyrics-lock{
+  overflow:hidden;
 }
 
 .data-list .row{
