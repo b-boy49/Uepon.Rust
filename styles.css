@@ -747,6 +747,54 @@ body.lightbox-lock{
   opacity:.88;
 }
 
+.application-closed{
+  position:relative;
+  overflow:hidden;
+  margin-top:24px;
+  padding:28px 24px;
+  text-align:center;
+  color:#fff7eb;
+  background:linear-gradient(135deg, #9e251b 0%, #531711 52%, #281714 100%);
+  border:2px solid #f0a06b;
+  border-radius:6px;
+  box-shadow:0 10px 30px rgba(0,0,0,.42), inset 0 0 28px rgba(255,190,127,.16);
+}
+
+.application-closed::before,
+.application-closed::after{
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:10px;
+  content:"";
+  background:repeating-linear-gradient(45deg, #f4c36d 0 8px, #4a1711 8px 16px);
+}
+
+.application-closed::before{left:0;}
+.application-closed::after{right:0;}
+
+.application-closed-label{
+  margin:0 0 4px;
+  font-family:'Share Tech Mono',monospace;
+  font-size:.9rem;
+  letter-spacing:.18em;
+  color:#ffd49b;
+}
+
+.application-closed h2{
+  margin:0;
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(2rem, 6vw, 3.5rem);
+  line-height:1.16;
+  letter-spacing:.06em;
+  text-shadow:0 3px 0 rgba(56,12,9,.72);
+}
+
+.application-closed > p:last-child{
+  margin:10px 0 0;
+  color:#ffe5c8;
+}
+
 .apply-grid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -921,6 +969,34 @@ body.lightbox-lock{
 .staff-link:hover{
   background:var(--rust-1);
   transform:translateY(-2px);
+}
+
+.squad-list{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+.squad-name{
+  display:inline-block;
+  margin-bottom:14px;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.8rem;
+  letter-spacing:.06em;
+  color:#fff;
+  border-bottom:2px solid var(--rust-2);
+}
+
+.squad-members{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+
+@media (max-width:720px){
+  .squad-members{
+    grid-template-columns:1fr;
+  }
 }
 
 .credit-card{
